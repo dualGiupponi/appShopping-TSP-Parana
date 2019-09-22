@@ -1,0 +1,10 @@
+<ul class="list-group">
+    <li *ngFor="let item of listaItems" class="list-group-item">
+        <item-component [itemPedido]="item" #itemComponent
+        (onModificarPedidoForm)="formPedido.modificarPedido(itemComponent.itemPedido)"
+        (onEliminarPedido)="eliminarPedido($event)"></item-component>
+    </li>
+</ul>
+<form-component #formPedido
+(onEnviarPedido)="agregarPedido($event)"
+></form-component>

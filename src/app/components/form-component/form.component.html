@@ -1,0 +1,8 @@
+<div>
+    <div class="input-group mb-3">
+        <input type="number" class="form-control" [(ngModel)]="itemPedido.cantidad" name="cantidad">
+        <input type="text" class="form-control" [(ngModel)]="itemPedido.descripcion" name="descripcion">
+    </div>
+    <button (click)="guardarPedido()" class="btn btn-primary">Guardar Pedido</button>
+    <button (click)="desmarcarPedido()" class="btn btn-secondary">Desmarcar Pedido</button>
+</div>
