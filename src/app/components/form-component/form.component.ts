@@ -19,11 +19,15 @@ export class formComponent{
 
     //Functions
     guardarPedido(){
-        this.onEnviarPedido.emit(this.itemPedido)
-        this.itemPedido = {
-            id: -1,
-            cantidad: 0,
-            descripcion: ""
+        if(this.itemPedido.descripcion == "" || this.itemPedido.cantidad == 0){
+            alert("Ingrese valores en los campos de 'cantidad' y 'descripcion'")
+        }else{
+            this.onEnviarPedido.emit(this.itemPedido)
+            this.itemPedido = {
+                id: -1,
+                cantidad: 0,
+                descripcion: ""
+            }
         }
     }
     desmarcarPedido(){
